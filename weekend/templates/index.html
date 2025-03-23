@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Notepad</title>
+</head>
+<body>
+    <h2>Update Note</h2>
+    <form method="post">
+        <textarea name="content" rows="5" cols="50">{{ content }}</textarea><br>
+        <button type="submit">Save</button>
+    </form>
+
+    <h3>Shared Content:</h3>
+    <p>{{ content }}</p>
+
+    <form action="/clearnotepadtxt" method="get">
+        <button type="submit">Clear Content</button>
+    </form>
+</body>
+</html>
